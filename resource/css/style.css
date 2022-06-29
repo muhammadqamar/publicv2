@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.main_container{
+    margin: 0px auto;
+    padding: 0px 120px;
+    max-width: 1440px;
+}
+.performances_main_section{
+    background: linear-gradient(182deg, #151515 -25.1%, #434343 145.59%);
+    padding: 158px 0 94px 0;
+}
+.performances_section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.performances_left_section{
+    width: max-content;
+}
+.performances_left_btn1{
+    background-color: #8C0014;
+    height: 63px;
+    width: 162px;
+    outline: none;
+    border: none;
+}
+.performances_left_btn2{
+    background-color: #F59B00;
+    color: #8C0014;
+    font-size: 40px;
+    padding: 8px 19px;
+    margin-top: 13px;
+    border: none;
+    outline: none;
+}
+
+.performances_left_btn2 span{
+    display: inline-block;
+    margin-right: 18px;
+}
+.performances_right_section{
+    padding-left: 116px;
+    flex: 1;
+}
+.performances_right_text{
+    margin-top: 30px;
+}
+.performances_right_text h3{
+    color: #fff;
+    font-size: 24px;
+}
+.performances_right_text p{
+    color: #9F9F9F;
+}
+/* =====Discove section======= */
+.discover_main_section{
+ 
+    padding: 85px 0 351px 0;
+    background: linear-gradient(182.61deg, #4B4B4B -4.76%, #2D2D2D 103.58%);
+}
+.discover_main_heading{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+.discover_card_section{
+    margin-top: 83px;
+}
+.discover_card{
+    position: relative;
+}
+.discover_card_details{
+    background: radial-gradient(357.44% 129.41% at 16.91% 1.75%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    padding: 148px 35px 34px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.discover_card_details-full-size{
+    display: flex;
+    
+    /* padding: 148px 35px 34px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; */
+
+}
+.discover_play_btn{
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    height: 89px;
+    width: 89px;
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    border-radius: 400px;
+}
+.discover_bg_img{
+    object-fit: cover;
+    height: 606px;
+    width: 100%;
+}
+.discover_card_full_size{
+    width: 100%;
+    height: 440px;
+    background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),url('../images/des3.png') right top no-repeat;
+}
+.discover_card_text{
+    margin-top: 123px;
+}
+.card_text_full_size{
+    padding-left: 36px;
+}
+.discover_card_text h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-right: 16px;
+
+}
+.discover_card_text p{
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF; 
+    opacity: 0.7;
+
+}
+.second-card-btn{
+   margin-top: -10px !important;
+}
+.discover_card_text button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+
+    background: #8C0014;
+    border: none;
+    color: #fff;
+    margin-top: 34px;
+
+}
+.discover_card_text button span{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.discover_card_full_size_btn_play{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====App Media query==== */
+@media screen and (max-width:1024px) {
+    .main_container{
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .performances_main_section{
+        padding: 70px 0 45px 0;
+    }
+    .performances_section{
+        display: block;
+    }
+    .performances_right_section{
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width:600px) {
+    .main_container{
+        padding: 0px 30px;
+    }
+}
