@@ -50,13 +50,15 @@ body {
   letter-spacing: -0.02em;
   color: #ffffff;
   margin-bottom: 20.24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .offer-box-heading .public-img-1 img {
   width: 119.17px;
   min-height: 29.79px;
   margin-left: 10px;
-  display: block;
 }
 .offers {
   display: flex;
@@ -834,7 +836,7 @@ body {
   }
 }
 
-@media (min-width: 310px) and (max-width: 390px) {
+@media (min-width: 310px) and (max-width: 389px) {
   .offer-box-heading .public-img-3 {
     display: block;
   }
