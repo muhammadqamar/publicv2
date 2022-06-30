@@ -15,7 +15,11 @@
 .main-hero-section {
   width: 100%;
   min-height: 946px;
-  background: radial-gradient(91.39% 271.41% at 89.65% 33.06%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: radial-gradient(
+    91.39% 271.41% at 89.65% 33.06%,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 100%
+  );
 }
 .hero-section-bg-img {
   width: 100%;
@@ -152,6 +156,19 @@
   border: none;
   outline: none;
 }
+@media (max-width: 766px) {
+  .miele-down-arrow {
+    display: none;
+  }
+}
+.down-arrow {
+  display: none;
+}
+@media (max-width: 766px) {
+  .down-arrow {
+    display: block;
+  }
+}
 
 .performances_left_btn2 span {
   display: inline-block;
@@ -176,6 +193,11 @@
   padding: 85px 0 351px 0;
   background: linear-gradient(182.61deg, #4b4b4b -4.76%, #2d2d2d 103.58%);
 }
+.discover-content-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .discover_main_heading {
   font-style: normal;
   font-weight: 400;
@@ -184,6 +206,11 @@
   text-align: center;
   letter-spacing: -0.01em;
   color: #ffffff;
+  margin-right: 21px;
+}
+.down-card-arrow {
+  width: 26.67px;
+  height: 32px;
 }
 .discover_card_section {
   margin-top: 83px;
@@ -192,7 +219,11 @@
   position: relative;
 }
 .discover_card_details {
-  background: radial-gradient(357.44% 129.41% at 16.91% 1.75%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: radial-gradient(
+    357.44% 129.41% at 16.91% 1.75%,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 100%
+  );
   padding: 148px 35px 34px;
   position: absolute;
   height: 100%;
@@ -232,13 +263,49 @@
   height: 606px;
   width: 100%;
 }
+@media (max-width: 766px) {
+  .discover-laundry-logo {
+    display: none;
+  }
+}
+.discover-laundry-img {
+  display: none;
+}
+@media (max-width: 766px) {
+  .discover-laundry-img {
+    display: block;
+  }
+}
 .discover_card_full_size {
   width: 100%;
   height: 440px;
-  background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+  background: linear-gradient(
+      237.78deg,
+      rgba(0, 0, 0, 0) 3.92%,
+      #000000 127.59%
+    ),
     url("../images/card-5.png") right top no-repeat;
-
   display: block;
+}
+@media (max-width: 766px) {
+  .discover_card_full_size {
+    background: none;
+  }
+}
+.discover-card-full-size2 {
+  background: none;
+}
+@media (max-width: 766px) {
+  .discover-card-full-size2 {
+    background: linear-gradient(
+        237.78deg,
+        rgba(0, 0, 0, 0) 3.92%,
+        #000000 127.59%
+      ),
+      url("../images/dishwashers-img.svg") right top no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .discover_card_text {
   margin-top: 123px;
