@@ -1,14 +1,14 @@
 @font-face {
   font-family: "MielePrintSymbole";
-  src: url("/resource/font/MielePrintSymbole_n111.otf");
+  src: url("../font/MielePrintSymbole_n111.otf");
 }
 @font-face {
   font-family: "Comfortaa";
-  src: url("/resource/font/Comfortaa-VariableFont_wght.ttf");
+  src: url("../font/Comfortaa-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("/resource/font/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("../font/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
 * {
@@ -25,7 +25,7 @@ body {
 .main-hero-section {
   width: 100%;
   min-height: 946px;
-  background-image: url(/resource/images/hero-section-bg.svg);
+  background-image: url(../images/hero-section-bg.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -63,6 +63,11 @@ body {
 @media (max-width: 900px) {
   .offer-box-heading {
     font-size: 19px;
+  }
+}
+@media (max-width: 420px) {
+  .offer-box-heading {
+    display: block;
   }
 }
 .offer-box-heading .public-img-1 img {
@@ -581,7 +586,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     margin: 0;
-    display: none;
+
   }
 }
 @media screen and (max-width: 768px) {
@@ -605,7 +610,7 @@ body {
     padding: 20px 17px 16px 21px;
   }
   .offer-box-heading {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     margin-bottom: 7px;
   }
@@ -873,7 +878,7 @@ body {
 }
 @media (max-width: 600px) {
   .offer-label-2 {
-    display: block;
+    display: none;
   }
 }
 @media (min-width: 390px) and (max-width: 600px) {
@@ -884,10 +889,10 @@ body {
   }
 }
 
-@media (min-width: 310px) and (max-width: 389px) {
-  /* .offer-box-heading .public-img-3 {
+@media (min-width: 310px) and (max-width: 600px) {
+  .offer-box-heading .public-img-3 {
     display: block;
-  } */
+  }
 
   .offer-box-heading .public-img-3 img {
     width: 77.81px;
