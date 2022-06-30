@@ -323,7 +323,9 @@ body {
   }
 }
 .discover_card_text {
-  margin-top: 123px;
+  margin-top: 89px;
+  display: flex;
+  flex-direction: column;
 }
 .card_text_full_size {
   padding-left: 36px;
@@ -619,7 +621,7 @@ body {
     margin-bottom: 24px;
   }
   .discover_card_text {
-    margin-top: 70px;
+    margin-top: 110px;
   }
   .discover_card_text h3 {
     font-size: 22px;
