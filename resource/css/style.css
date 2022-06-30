@@ -40,7 +40,6 @@ body {
 .hero-top-images {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   margin-bottom: 57px;
 }
 .offer-box {
@@ -60,9 +59,12 @@ body {
   margin-bottom: 20.24px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
-
+@media (max-width: 900px) {
+  .offer-box-heading {
+    font-size: 19px;
+  }
+}
 .offer-box-heading .public-img-1 img {
   width: 119.17px;
   min-height: 29.79px;
@@ -244,7 +246,11 @@ body {
   position: relative;
 }
 .discover_card_details {
-  background: radial-gradient(357.44% 129.41% at 16.91% 1.75%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: radial-gradient(
+    357.44% 129.41% at 16.91% 1.75%,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 100%
+  );
   padding: 148px 35px 34px;
   position: absolute;
   height: 100%;
@@ -300,9 +306,24 @@ body {
 .discover_card_full_size {
   width: 100%;
   height: 440px;
-  background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
-    url("../images/card-5.png") right top no-repeat;
+  background: linear-gradient(
+      237.78deg,
+      rgba(0, 0, 0, 0) 3.92%,
+      #000000 127.59%
+    ),
+    url("../images/card-5.png") no-repeat;
+  background-size: cover;
   display: block;
+}
+@media (max-width: 900px) {
+  .discover_card_full_size {
+    background: linear-gradient(
+        237.78deg,
+        rgba(0, 0, 0, 0) 3.92%,
+        #000000 127.59%
+      ),
+      url("../images/card-5.png") top no-repeat;
+  }
 }
 @media (max-width: 766px) {
   .discover_card_full_size {
@@ -314,7 +335,11 @@ body {
 }
 @media (max-width: 766px) {
   .discover-card-full-size2 {
-    background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+    background: linear-gradient(
+        237.78deg,
+        rgba(0, 0, 0, 0) 3.92%,
+        #000000 127.59%
+      ),
       url("../images/dishwashers-img.svg") right top no-repeat;
     background-position: center;
     background-size: cover;
@@ -548,7 +573,17 @@ body {
     padding: 0px 60px;
   }
 }
-
+@media screen and (max-width: 600px) {
+  .offer-box-heading .public-img-1 img {
+    display: none;
+  }
+  .offer-label {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   /* hero */
   .hero-content {
@@ -565,10 +600,6 @@ body {
   .tag-label {
     margin-bottom: 16.71px;
   }
-
-  .offer-box-heading .public-img-1 img {
-    display: none;
-  }
   .offer-box {
     width: 100%;
     padding: 20px 17px 16px 21px;
@@ -577,12 +608,6 @@ body {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 7px;
-  }
-  .offer-label {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 0;
-    display: none;
   }
   .offer-price {
     width: 78px;
@@ -846,12 +871,12 @@ body {
     margin-left: 3px;
   }
 }
-
-@media (min-width: 390px) and (max-width: 768px) {
+@media (max-width: 600px) {
   .offer-label-2 {
     display: block;
   }
-
+}
+@media (min-width: 390px) and (max-width: 600px) {
   .offer-label-2 .public-img-2 img {
     margin-left: 20px;
     width: 104.13px;
@@ -860,9 +885,9 @@ body {
 }
 
 @media (min-width: 310px) and (max-width: 389px) {
-  .offer-box-heading .public-img-3 {
+  /* .offer-box-heading .public-img-3 {
     display: block;
-  }
+  } */
 
   .offer-box-heading .public-img-3 img {
     width: 77.81px;
