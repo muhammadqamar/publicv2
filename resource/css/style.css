@@ -168,7 +168,8 @@ body {
   flex-wrap: wrap;
 }
 .performances_left_section {
-  width: max-content;
+  display: flex;
+  flex-direction: column;
 }
 .performances_left_btn1 {
   background-color: #8c0014;
@@ -178,6 +179,8 @@ body {
   border: none;
 }
 .performances_left_btn2 {
+  width: 234px;
+  height: 88px;
   background-color: #f59b00;
   color: #8c0014;
   font-size: 40px;
@@ -185,6 +188,9 @@ body {
   margin-top: 13px;
   border: none;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .down-arrow {
@@ -219,6 +225,29 @@ body {
   color: #9f9f9f;
 }
 /* =====Discove section======= */
+
+.discover_container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 160px;
+}
+@media (min-width: 1315px) and (max-width: 1439px) {
+  .discover_container {
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1315px) {
+  .discover_container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .discover_container {
+    padding: 0 24px;
+  }
+}
+
 .discover_main_section {
   padding: 85px 0 351px 0;
   background: linear-gradient(182.61deg, #4b4b4b -4.76%, #2d2d2d 103.58%);
@@ -249,51 +278,91 @@ body {
 }
 .discover_card {
   position: relative;
+  width: 550px;
+  height: 606px;
 }
-.discover_card_details {
-  background: radial-gradient(357.44% 129.41% at 16.91% 1.75%, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  padding: 148px 35px 34px;
+
+@media (max-width: 767px) {
+  .discover_card {
+    height: 468px;
+  }
+}
+
+/* new */
+
+.first-four-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1220px) {
+  .first-four-card {
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.first-four-card .discover_card_details {
+  background: radial-gradient(357.44% 129.41% at 16.91% 1.75%, rgba(0, 0, 0, 0) 0%, #000000 100%),
+    linear-gradient(188.56deg, rgba(75, 75, 75, 0) 24.28%, #4b4b4b 63.49%);
+  padding: 148px 34px 34px;
   position: absolute;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
-}
-.discover_card_details-full-size {
-  display: flex;
 
-  /* padding: 148px 35px 34px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .last-moile-card {
   display: none;
 }
 
+.discover_card_heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
 .discover_play_btn {
   background: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
   height: 89px;
   width: 89px;
-  display: flex;
   margin: 0 auto;
   border: none;
   outline: none;
   border-radius: 400px;
+  margin-bottom: 22px;
+  cursor: pointer;
 }
 .discover_bg_img {
   object-fit: cover;
   height: 606px;
   width: 100%;
 }
+
+@media (max-width: 767px) {
+  .discover_bg_img {
+    height: 468px;
+  }
+}
+
 @media (max-width: 766px) {
   .discover-laundry-logo {
     display: none;
+  }
+
+  .first-four-card .discover_card_details {
+    padding: 68px 10px 12px;
   }
 }
 .discover-laundry-img {
@@ -308,13 +377,18 @@ body {
   width: 100%;
   height: 440px;
   background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+    linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
     url("../images/card-5.png") no-repeat;
   background-size: cover;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 34px;
 }
 @media (max-width: 900px) {
   .discover_card_full_size {
     background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+      linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
       url("../images/card-5.png") top no-repeat;
   }
 }
@@ -323,24 +397,25 @@ body {
     background: none;
   }
 }
-.discover-card-full-size2 {
+/* .discover-card-full-size2 {
   background: none;
-}
+} */
 @media (max-width: 766px) {
   .discover-card-full-size2 {
     background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+      linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
       url("../images/dishwashers-img.svg") right top no-repeat;
     background-position: center;
     background-size: cover;
   }
 }
 .discover_card_text {
-  margin-top: 89px;
+  /* margin-top: 89px; */
   display: flex;
   flex-direction: column;
 }
 .card_text_full_size {
-  padding-left: 36px;
+  width: 481px;
 }
 .discover_card_text h3 {
   font-style: normal;
@@ -352,16 +427,14 @@ body {
   margin-right: 16px;
 }
 .discover_card_text p {
-  margin-top: 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-
   letter-spacing: 0.01em;
-
   color: #ffffff;
   opacity: 0.7;
+  margin-bottom: 32px;
 }
 .second-card-btn {
   margin-top: -10px !important;
@@ -372,11 +445,9 @@ body {
   display: flex;
   width: 100%;
   height: 70px;
-
   background: #8c0014;
   border: none;
   color: #fff;
-  margin-top: 34px;
 }
 .discover_card_text button span {
   display: inline-block;
@@ -384,9 +455,14 @@ body {
 }
 
 .discover_card_full_size_btn_play {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 115px;
+  margin-right: 224px;
+}
+
+@media (min-width: 768px) and (max-width: 1030px) {
+  .discover_card_full_size_btn_play {
+    margin-right: 80px;
+  }
 }
 
 /* three */
@@ -638,12 +714,7 @@ body {
   .discover_card_section {
     margin-top: 0;
   }
-  .discover_card {
-    margin-bottom: 24px;
-  }
-  .discover_card_text {
-    margin-top: 110px;
-  }
+
   .discover_card_text h3 {
     font-size: 22px;
     line-height: 24px;
@@ -835,12 +906,6 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1099px) {
-  .discover_card_text {
-    margin-top: 32px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 899px) {
   .hero-content {
     padding: 96px 50px 130px;
@@ -918,4 +983,64 @@ body {
   .root-container {
     padding-bottom: 1030px;
   }
+}
+
+/* modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    padding: 10px;
+  }
+}
+
+/* The Close Button */
+.close1,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6:hover,
+.close1,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

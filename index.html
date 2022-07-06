@@ -4,16 +4,1067 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="resource/css/style.css" />
+    <!-- <link rel="stylesheet" href="resource/css/style.css" /> -->
     <title>Home</title>
   </head>
   <body>
+    <!-- style -->
+
+    <style>
+      @font-face {
+        font-family: "MielePrintSymbole";
+        src: url("/resource/font/MielePrintSymbole_n111.otf");
+      }
+      @font-face {
+        font-family: "Comfortaa";
+        src: url("/resource/font/Comfortaa-VariableFont_wght.ttf");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        src: url("/resource/font/OpenSans-VariableFont_wdth\,wght.ttf");
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "MielePrintSymbole";
+      }
+
+      /* hero-section */
+
+      .main-hero-section {
+        width: 100%;
+        min-height: 946px;
+        background-image: url(/resource/images/hero-section-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      .hero-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 96px 172px 130px 160px;
+      }
+
+      .hero-top-images {
+        display: flex;
+        align-items: center;
+        margin-bottom: 57px;
+      }
+      .offer-box {
+        width: 568.83px;
+        min-height: 211.31px;
+        background: #f05a22;
+        border-radius: 4px;
+        padding: 17px 29px;
+        border-bottom: 7px solid #f59b00;
+      }
+      .offer-box-heading {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 39px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin-bottom: 20.24px;
+        display: flex;
+        align-items: center;
+      }
+      @media (max-width: 900px) {
+        .offer-box-heading {
+          font-size: 19px;
+        }
+      }
+      @media (max-width: 420px) {
+        .offer-box-heading {
+          display: block;
+        }
+      }
+      .offer-box-heading .public-img-1 img {
+        width: 119.17px;
+        min-height: 29.79px;
+        margin-left: 10px;
+      }
+      .offers {
+        display: flex;
+      }
+
+      .offer-label {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 39px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin: 0 9.83px 0 0;
+        display: block;
+      }
+
+      .offer-label-2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        display: none;
+      }
+
+      .offer-box-heading .public-img-3 {
+        display: none;
+      }
+
+      .offer-price {
+        width: 115.49px;
+        height: 115.49px;
+        margin-right: 13.15px;
+      }
+      .offer-text {
+        width: 190.43px;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 42px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin: 0;
+      }
+      .hero-top-img-2 {
+        width: 538px;
+        height: 215px;
+        display: block;
+      }
+      .tag-label {
+        width: auto;
+        margin-bottom: 23px;
+      }
+      .hero-sub-heading {
+        width: 564px;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 72px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin: 0 0 24px;
+        display: block;
+      }
+
+      .hero-sub-heading-mob {
+        display: none;
+      }
+
+      .hero-description {
+        width: 490px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #9f9f9f;
+        margin: 0;
+      }
+      .hero-description.des-one {
+        margin: 0 0 24px;
+      }
+
+      /*  */
+
+      .main_container {
+        margin: 0px auto;
+        padding: 0px 120px;
+        max-width: 1440px;
+      }
+      .performances_main_section {
+        background: linear-gradient(182deg, #151515 -25.1%, #434343 145.59%);
+        padding: 158px 0 94px 0;
+      }
+      .performances_section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .performances_left_section {
+        display: flex;
+        flex-direction: column;
+      }
+      .performances_left_btn1 {
+        background-color: #8c0014;
+        height: 63px;
+        width: 162px;
+        outline: none;
+        border: none;
+      }
+      .performances_left_btn2 {
+        width: 234px;
+        height: 88px;
+        background-color: #f59b00;
+        color: #8c0014;
+        font-size: 40px;
+        padding: 8px 19px;
+        margin-top: 13px;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .down-arrow {
+        display: none;
+      }
+
+      @media (max-width: 766px) {
+        .down-arrow {
+          display: block;
+        }
+        .miele-down-arrow {
+          display: none;
+        }
+      }
+
+      .performances_left_btn2 span {
+        display: inline-block;
+        margin-right: 18px;
+      }
+      .performances_right_section {
+        padding-left: 116px;
+        flex: 1;
+      }
+      .performances_right_text {
+        margin-top: 30px;
+      }
+      .performances_right_text h3 {
+        color: #fff;
+        font-size: 24px;
+      }
+      .performances_right_text p {
+        color: #9f9f9f;
+      }
+      /* =====Discove section======= */
+
+      .discover_container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 160px;
+      }
+      @media (min-width: 1315px) and (max-width: 1439px) {
+        .discover_container {
+          padding: 0 100px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1315px) {
+        .discover_container {
+          padding: 0 50px;
+        }
+      }
+      @media (max-width: 768px) {
+        .discover_container {
+          padding: 0 24px;
+        }
+      }
+
+      .discover_main_section {
+        padding: 85px 0 351px 0;
+        background: linear-gradient(182.61deg, #4b4b4b -4.76%, #2d2d2d 103.58%);
+      }
+      .discover-content-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 83px;
+      }
+      .discover_main_heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 52px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        margin-right: 21px;
+        margin-bottom: 0;
+      }
+      .down-card-arrow {
+        width: 26.67px;
+        height: 32px;
+      }
+      .discover_card_section {
+        margin-top: 83px;
+      }
+      .discover_card {
+        position: relative;
+        width: 550px;
+        height: 606px;
+      }
+
+      @media (max-width: 767px) {
+        .discover_card {
+          height: 468px;
+        }
+      }
+
+      /* new */
+
+      .first-four-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 1220px) {
+        .first-four-card {
+          justify-content: center;
+          gap: 24px;
+          margin-bottom: 24px;
+        }
+      }
+
+      .first-four-card .discover_card_details {
+        background: radial-gradient(
+            357.44% 129.41% at 16.91% 1.75%,
+            rgba(0, 0, 0, 0) 0%,
+            #000000 100%
+          ),
+          linear-gradient(188.56deg, rgba(75, 75, 75, 0) 24.28%, #4b4b4b 63.49%);
+        padding: 148px 34px 34px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .last-moile-card {
+        display: none;
+      }
+
+      .discover_card_heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .discover_play_btn {
+        background: rgba(0, 0, 0, 0.6);
+        height: 89px;
+        width: 89px;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        border-radius: 400px;
+        margin-bottom: 22px;
+        cursor: pointer;
+      }
+      .discover_bg_img {
+        object-fit: cover;
+        height: 606px;
+        width: 100%;
+      }
+
+      @media (max-width: 767px) {
+        .discover_bg_img {
+          height: 468px;
+        }
+      }
+
+      @media (max-width: 766px) {
+        .discover-laundry-logo {
+          display: none;
+        }
+
+        .first-four-card .discover_card_details {
+          padding: 68px 10px 12px;
+        }
+      }
+      .discover-laundry-img {
+        display: none;
+      }
+      @media (max-width: 766px) {
+        .discover-laundry-img {
+          display: block;
+        }
+      }
+      .discover_card_full_size {
+        width: 100%;
+        height: 440px;
+        background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+          linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
+          url("/resource/images/card-5.png") no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 40px 34px;
+      }
+      @media (max-width: 900px) {
+        .discover_card_full_size {
+          background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+            linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
+            url("/resource/images/card-5.png") top no-repeat;
+        }
+      }
+      @media (max-width: 766px) {
+        .discover_card_full_size {
+          background: none;
+        }
+      }
+      /* .discover-card-full-size2 {
+  background: none;
+} */
+      @media (max-width: 766px) {
+        .discover-card-full-size2 {
+          background: linear-gradient(237.78deg, rgba(0, 0, 0, 0) 3.92%, #000000 127.59%),
+            linear-gradient(258.09deg, rgba(75, 75, 75, 0) -1.6%, #4b4b4b 72.66%),
+            url("/resource/images/dishwashers-img.svg") right top no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      .discover_card_text {
+        /* margin-top: 89px; */
+        display: flex;
+        flex-direction: column;
+      }
+      .card_text_full_size {
+        width: 481px;
+      }
+      .discover_card_text h3 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin-right: 16px;
+      }
+      .discover_card_text p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+        opacity: 0.7;
+        margin-bottom: 32px;
+      }
+      .second-card-btn {
+        margin-top: -10px !important;
+      }
+      .discover_card_text button {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 70px;
+        background: #8c0014;
+        border: none;
+        color: #fff;
+      }
+      .discover_card_text button span {
+        display: inline-block;
+        margin-right: 40px;
+      }
+
+      .discover_card_full_size_btn_play {
+        margin-bottom: 115px;
+        margin-right: 224px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1030px) {
+        .discover_card_full_size_btn_play {
+          margin-right: 80px;
+        }
+      }
+
+      /* three */
+
+      .public-offers-sectiion {
+        position: absolute;
+        width: 100%;
+        padding: 0 16px;
+      }
+      .public-offer-contant {
+        max-width: 1292px;
+        min-height: 770px;
+        margin: -270px auto 0;
+        background: #fff6e8;
+        border-radius: 43px;
+        padding: 56px 83px 64px;
+      }
+      .public-offer-con-heading {
+        font-family: "Comfortaa";
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 56px;
+        letter-spacing: -0.01em;
+        color: #000000;
+        margin-bottom: 48px;
+        text-align: center;
+      }
+
+      .offer-cords-box {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 52px;
+      }
+      .box-bg-color {
+        width: 543px;
+        min-height: 212px;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 26px;
+      }
+      /* card-1 */
+      .box-bg-img {
+        width: 100%;
+        height: 100%;
+        background-image: url(/resource/images/box-1.svg);
+        background-position-x: -88px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 35px 14px 24px;
+      }
+      /* card-2 */
+      .box-bg-color.card-bg-2 {
+        background: #f59b00;
+      }
+
+      .box-bg-img.card-bg-img-2 {
+        background-image: url(/resource/images/box-2.svg);
+        background-position-x: -88px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .box-img {
+        width: 207px;
+        height: 185px;
+        margin-right: 50px;
+      }
+      .box-text {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: #000000;
+        margin: 0;
+      }
+
+      .box-text span {
+        font-weight: 700;
+      }
+
+      /* card-2 */
+      .box-text.card-text-2 {
+        font-family: "Open Sans";
+        width: 210px;
+        font-weight: 700;
+        line-height: 22px;
+      }
+      /* box-2 */
+
+      .offer-cords-box-2 {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 140px;
+      }
+
+      .box-2-bg-color {
+        width: 202px;
+        min-height: 279px;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .box-2-bg-img {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 178px;
+        border-radius: 13px;
+      }
+
+      .box-2-img {
+        width: 200px;
+        height: 172px;
+        margin: 14px 0;
+      }
+      .box-3-img {
+        width: 200px;
+        height: 81.1px;
+        margin: 59px 0;
+      }
+      .box-2-text {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #000000;
+        margin: 0;
+        padding-top: 16px;
+        display: block;
+      }
+      .box-2-text span {
+        font-weight: 700;
+      }
+
+      .box-2-taxt-mobile {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #000000;
+        display: none;
+      }
+      .box-2-taxt-mobile span {
+        font-weight: 600;
+      }
+
+      .box-card-link {
+        width: auto;
+        text-decoration: none;
+      }
+
+      /* =====App Media query==== */
+      @media screen and (max-width: 1024px) {
+        .main_container {
+          padding: 0px 60px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .offer-box-heading .public-img-1 img {
+          display: none;
+        }
+        .offer-label {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        /* hero */
+        .hero-content {
+          padding: 64px 24px 301px;
+        }
+
+        .hero-top-img-2 {
+          display: none;
+        }
+        .hero-top-images {
+          margin-bottom: 32px;
+        }
+
+        .tag-label {
+          margin-bottom: 16.71px;
+        }
+        .offer-box {
+          width: 100%;
+          padding: 20px 17px 16px 21px;
+        }
+        .offer-box-heading {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 7px;
+        }
+        .offer-price {
+          width: 78px;
+          height: 78px;
+          margin-right: 11px;
+        }
+        .offer-text {
+          width: 124px;
+          font-size: 32px;
+          line-height: 32px;
+          margin: 0;
+        }
+        .hero-sub-heading {
+          width: 100%;
+          font-size: 32px;
+          line-height: 42px;
+          margin: 0 0 11px;
+          display: none;
+        }
+        .hero-sub-heading-mob {
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 42px;
+          letter-spacing: -0.02em;
+          color: #ffffff;
+          display: block;
+          margin: 0 0 11px;
+        }
+        .hero-description {
+          width: 100%;
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        .discover_main_section {
+          padding: 34px 0 280px 0;
+        }
+
+        /*  */
+        .discover_card_section {
+          margin-top: 0;
+        }
+
+        .discover_card_text h3 {
+          font-size: 22px;
+          line-height: 24px;
+        }
+        .discover_card_text p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .discover_card_text button span {
+          font-size: 14px;
+          line-height: 28px;
+        }
+        .discover_card_text button {
+          height: 40px;
+        }
+
+        .discover-content-logo {
+          margin-bottom: 24px;
+        }
+        /*  */
+        .performances_main_section {
+          padding: 70px 0 45px 0;
+        }
+        .performances_section {
+          display: block;
+        }
+        .performances_right_section {
+          padding-left: 0px;
+        }
+
+        .public-offer-contant {
+          margin: -230px auto 0;
+          border-radius: 8px;
+          padding: 25px 22px;
+        }
+
+        .public-offer-con-heading {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 32px;
+        }
+
+        .offer-cords-box {
+          gap: 32px;
+          margin-bottom: 32px;
+        }
+        .box-bg-color {
+          min-height: inherit;
+          width: 100%;
+          border-radius: 13px;
+        }
+
+        .discover_main_heading {
+          font-size: 22px;
+          line-height: 40px;
+        }
+        .down-card-arrow {
+          width: 14px;
+          height: 16.8px;
+        }
+
+        /* box-1 */
+        .box-bg-img {
+          background-image: url(/resource/images/mobile-bg-img.svg);
+          background-position: top left;
+          background-repeat: no-repeat;
+          background-size: 178px;
+          border-radius: 13px;
+          flex-direction: column;
+          padding: 12px 12.5px 29px;
+        }
+        /* card-2 */
+        .box-bg-color.card-bg-2 {
+          background: #ffffff;
+        }
+        .box-bg-img.card-bg-img-2 {
+          background-image: url(/resource/images/mobile-bg-img.svg);
+          background-position: top left;
+          background-repeat: no-repeat;
+          background-size: 178px;
+        }
+
+        .box-2-bg-color {
+          width: 100%;
+          min-height: inherit;
+          background: #ffffff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 26px;
+        }
+        .box-2-bg-img {
+          min-height: inherit;
+          text-align: center;
+          background-image: url(/resource/images/mobile-bg-img.svg);
+          padding: 13px 18px 21px;
+        }
+        .box-2-bg-img.img-not {
+          background-image: none !important;
+        }
+        .offer-cords-box-2 {
+          justify-content: center;
+          padding: 0;
+        }
+
+        .box-img {
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+        .box-text {
+          text-align: center;
+        }
+        .box-text.card-text-2 {
+          width: 100%;
+        }
+
+        .box-card-link {
+          width: 100%;
+        }
+        .last-moile-card {
+          display: block;
+        }
+        .discover_card_full_size {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .main-hero-section {
+          background-image: url(/resource/images/hero-section-bg-mobile.svg);
+        }
+        .main_container {
+          padding: 0px 24px;
+        }
+        /* box-1 */
+        .box-img {
+          width: 93.39px;
+          height: 83px;
+        }
+        .box-text {
+          font-size: 14px;
+          line-height: 18px;
+          margin: 0;
+        }
+        /* box-2 */
+        .box-2-img {
+          width: 104.44px;
+          height: 90px;
+          margin: 0 0 8px;
+        }
+        .box-3-img {
+          width: 166.7px;
+          height: 67px;
+          margin: 11px 0 23px;
+        }
+        .box-2-text {
+          font-size: 14px;
+          line-height: 22px;
+          padding-top: 0;
+          display: none;
+        }
+        .box-2-taxt-mobile {
+          display: block;
+        }
+        /*  */
+      }
+
+      @media (min-width: 576px) {
+        .modal-dialog {
+          max-width: 800px;
+        }
+      }
+
+      @media (min-width: 899px) and (max-width: 1350px) {
+        .hero-content {
+          padding: 96px 66px 130px;
+        }
+
+        .offer-box {
+          width: 463px;
+          padding: 14px 26px 20px 23px;
+        }
+        .hero-top-img-2 {
+          width: 304px;
+        }
+
+        .offer-box-heading .public-img-1 img {
+          width: 97px;
+          height: 24.25px;
+          margin-left: 3px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 899px) {
+        .hero-content {
+          padding: 96px 50px 130px;
+        }
+        .offer-box {
+          width: 463px;
+          padding: 14px 26px 20px 23px;
+        }
+        .hero-top-img-2 {
+          width: 304px;
+        }
+
+        .offer-box-heading .public-img-1 img {
+          width: 97px;
+          height: 24.25px;
+          margin-left: 3px;
+        }
+      }
+      @media (max-width: 600px) {
+        .offer-label-2 {
+          display: none;
+        }
+      }
+      @media (min-width: 390px) and (max-width: 600px) {
+        .offer-label-2 .public-img-2 img {
+          margin-left: 20px;
+          width: 104.13px;
+          height: 16.4px;
+        }
+      }
+
+      @media (min-width: 310px) and (max-width: 600px) {
+        .offer-box-heading .public-img-3 {
+          display: block;
+        }
+
+        .offer-box-heading .public-img-3 img {
+          width: 77.81px;
+          height: 16.4px;
+          margin-right: 10px;
+        }
+      }
+
+      .root-container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 600px;
+      }
+
+      @media (min-width: 1148px) and (max-width: 1300px) {
+        .root-container {
+          padding-bottom: 820px;
+        }
+      }
+
+      @media (min-width: 914px) and (max-width: 1148px) {
+        .root-container {
+          padding-bottom: 1140px;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 914px) {
+        .root-container {
+          padding-bottom: 1460px;
+        }
+      }
+
+      @media (min-width: 467px) and (max-width: 601px) {
+        .root-container {
+          padding-bottom: 916px;
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 467px) {
+        .root-container {
+          padding-bottom: 1030px;
+        }
+      }
+
+      /* modal */
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 10px;
+        max-width: 1000px;
+      }
+
+      @media (max-width: 767px) {
+        .modal-content {
+          padding: 10px;
+        }
+      }
+
+      /* The Close Button */
+      .close1,
+      .close2,
+      .close3,
+      .close4,
+      .close5,
+      .close6 {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close1,
+      .close2,
+      .close3,
+      .close4,
+      .close5,
+      .close6:hover,
+      .close1,
+      .close2,
+      .close3,
+      .close4,
+      .close5,
+      .close6:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- html -->
+
     <section class="root-container">
       <section class="main-hero-section">
         <div class="hero-content">
@@ -68,12 +1119,12 @@
       <!--  -->
 
       <section class="performances_main_section">
-        <section class="main_container mx-auto performances_section">
+        <section class="main_container performances_section">
           <div class="performances_left_section">
             <button class="performances_left_btn1">
               <img src="resource/images/text.svg" />
             </button>
-            <button class="performances_left_btn2 d-flex align-items-center">
+            <button class="performances_left_btn2">
               <span>Οι αξίες</span>
               <img class="miele-down-arrow" src="resource/images/arrow.svg" />
               <img class="down-arrow" src="resource/images/miele-down-arrow.svg" />
@@ -106,143 +1157,106 @@
           </div>
         </section>
       </section>
+
+      <!-- cards -->
+
       <section class="discover_main_section">
-        <section class="main_container">
+        <section class="discover_container">
           <div class="discover-content-logo">
             <h1 class="discover_main_heading">Ανακάλυψε κάθε γωνιά</h1>
             <img src="resource/images/arrow-down.svg" class="down-card-arrow" alt="" />
           </div>
-          <div class="row discover_card_section">
-            <div class="col-md-6">
-              <!-- 1 -->
-              <div class="discover_card">
-                <img src="resource/images/des1.png" class="discover_bg_img" />
-                <div class="discover_card_details">
-                  <button
-                    class="discover_play_btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+
+          <div class="first-four-card">
+            <!-- 1 -->
+            <div class="discover_card">
+              <img src="resource/images/des1.png" class="discover_bg_img" />
+              <div class="discover_card_details">
+                <button class="discover_play_btn" id="myBtn1">
+                  <img src="resource/images/play.svg" />
+                </button>
+                <div class="discover_card_text">
+                  <div class="discover_card_heading">
+                    <h3>Κουζίνες</h3>
+                    <img src="resource/images/card1.svg " />
+                  </div>
+                  <p>
+                    Συσκευές σχεδιασμένες να λειτουργούν διαισθητικά μεταξύ τους για απόλυτη
+                    ευελιξία και μαγειρική εμπειρία.
+                  </p>
+                  <a
+                    href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20εντοιχιζόμενες%20συσκευές%22%5D%5D"
+                    target="_blank"
+                    style="text-decoration: none"
                   >
-                    <img src="resource/images/play.svg" />
-                  </button>
-                  <div class="discover_card_text">
-                    <div class="d-flex align-items-center">
-                      <h3>Κουζίνες</h3>
-                      <img src="resource/images/card1.svg " />
-                    </div>
-                    <p>
-                      Συσκευές σχεδιασμένες να λειτουργούν διαισθητικά μεταξύ τους για απόλυτη
-                      ευελιξία και μαγειρική εμπειρία.
-                    </p>
-                    <a
-                      href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20εντοιχιζόμενες%20συσκευές%22%5D%5D"
-                      target="_blank"
-                      style="text-decoration: none"
-                    >
-                      <button class="">
-                        <span>Δες τα προΪοντα</span>
-                        <img src="resource/images/sarrow.svg" />
-                      </button>
-                    </a>
-                  </div>
+                    <button class="">
+                      <span>Δες τα προΪοντα</span>
+                      <img src="resource/images/sarrow.svg" />
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
-
-            <!-- video modal -->
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <iframe
-                      width="100%"
-                      height="380"
-                      src="https://www.youtube.com/embed/eOn0m0znGb8"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <!-- 2 -->
-              <div class="discover_card">
-                <img src="resource/images/des2.png" class="discover_bg_img discover-laundry-logo" />
-                <img
-                  src="resource/images/laundry-img.svg"
-                  class="discover_bg_img discover-laundry-img"
-                />
-                <div class="discover_card_details">
-                  <button
-                    class="discover_play_btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal-2"
-                  >
-                    <img src="resource/images/play.svg" />
-                  </button>
-                  <div class="discover_card_text">
-                    <div class="d-flex align-items-center">
-                      <h3>Πλυντήρια Ρούχων</h3>
-                      <img src="resource/images/card2.svg " />
-                    </div>
-                    <p>
-                      Φαντάσου να χρησιμοποιείς μία συσκευή για 20 χρόνια, μία που να πλένει τα
-                      ρούχα σου πιο ήπια, ώστε να διαρκούν περισσότερο. 20 χρόνια καταναλώνοντας
-                      λιγότερη ενέργεια και λιγότερο νερό, για να καταναλώνεις λιγότερο.
-                    </p>
-                    <a
-                      href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20%26%20στεγνωτήρια%20ρούχων%22%5D%5D"
-                      target="_blank"
-                      style="text-decoration: none"
-                    >
-                      <button class="second-card-btn">
-                        <span>Δες τα προΪοντα</span>
-                        <img src="resource/images/sarrow.svg" />
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- video modal -->
-          <div
-            class="modal fade"
-            id="exampleModal-2"
-            tabindex="-1"
-            aria-labelledby="exampleModal-2Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
+            <!-- card-1-modal -->
+            <div class="modal" id="myModal1">
               <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
+                <span class="close1">&times;</span>
+
+                <div class="modal-content">
+                  <iframe
+                    width="100%"
+                    height="380"
+                    src="https://www.youtube.com/embed/eOn0m0znGb8"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                 </div>
-                <div class="modal-body">
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="discover_card">
+              <img src="resource/images/des2.png" class="discover_bg_img discover-laundry-logo" />
+              <img
+                src="resource/images/laundry-img.svg"
+                class="discover_bg_img discover-laundry-img"
+              />
+              <div class="discover_card_details">
+                <button class="discover_play_btn" id="myBtn2">
+                  <img src="resource/images/play.svg" />
+                </button>
+                <div class="discover_card_text">
+                  <div class="discover_card_heading">
+                    <h3>Πλυντήρια Ρούχων</h3>
+                    <img src="resource/images/card2.svg " />
+                  </div>
+                  <p>
+                    Φαντάσου να χρησιμοποιείς μία συσκευή για 20 χρόνια, μία που να πλένει τα ρούχα
+                    σου πιο ήπια, ώστε να διαρκούν περισσότερο. 20 χρόνια καταναλώνοντας λιγότερη
+                    ενέργεια και λιγότερο νερό, για να καταναλώνεις λιγότερο.
+                  </p>
+                  <a
+                    href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20%26%20στεγνωτήρια%20ρούχων%22%5D%5D"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    <button class="second-card-btn">
+                      <span>Δες τα προΪοντα</span>
+                      <img src="resource/images/sarrow.svg" />
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- card-2-modal -->
+            <div class="modal" id="myModal2">
+              <div class="modal-content">
+                <span class="close2">&times;</span>
+
+                <div class="modal-content">
                   <iframe
                     width="100%"
                     height="380"
@@ -255,254 +1269,202 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row discover_card_section">
-            <div class="col-md-6">
-              <!-- 1 -->
-              <div class="discover_card">
-                <img src="resource/images/des3.png" class="discover_bg_img" />
-                <div class="discover_card_details">
-                  <button
-                    class="discover_play_btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal-3"
+            <!-- 3 -->
+            <div class="discover_card">
+              <img src="resource/images/des3.png" class="discover_bg_img" />
+              <div class="discover_card_details">
+                <button class="discover_play_btn" id="myBtn3">
+                  <img src="resource/images/play.svg" />
+                </button>
+                <div class="discover_card_text">
+                  <div class="discover_card_heading">
+                    <h3>Ψυγεία</h3>
+                    <img src="resource/images/card3.svg " />
+                  </div>
+                  <p>
+                    Διατήρησε τα τρόφιμά σου έως και 5 φορές περισσότερο μέσα στα ψυγεία της Miele.
+                    Διαισθητική λειτουργία μεταξύ των συσκευών κουζίνας.
+                  </p>
+                  <a
+                    href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20ψυγεία%22%5D%5D"
+                    target="_blank"
+                    style="text-decoration: none"
                   >
-                    <img src="resource/images/play.svg" />
-                  </button>
-                  <div class="discover_card_text">
-                    <div class="d-flex align-items-center">
-                      <h3>Ψυγεία</h3>
-                      <img src="resource/images/card3.svg " />
-                    </div>
-                    <p>
-                      Διατήρησε τα τρόφιμά σου έως και 5 φορές περισσότερο μέσα στα ψυγεία της
-                      Miele. Διαισθητική λειτουργία μεταξύ των συσκευών κουζίνας.
-                    </p>
-                    <a
-                      href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20ψυγεία%22%5D%5D"
-                      target="_blank"
-                      style="text-decoration: none"
-                    >
-                      <button class="">
-                        <span>Δες τα προΪοντα</span>
-                        <img src="resource/images/sarrow.svg" />
-                      </button>
-                    </a>
-                  </div>
+                    <button class="">
+                      <span>Δες τα προΪοντα</span>
+                      <img src="resource/images/sarrow.svg" />
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- video modal -->
-            <div
-              class="modal fade"
-              id="exampleModal-3"
-              tabindex="-1"
-              aria-labelledby="exampleModal-3Label"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <iframe
-                      width="100%"
-                      height="380"
-                      src="https://www.youtube.com/embed/eOn0m0znGb8"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <!-- 2 -->
-              <div class="discover_card">
-                <img src="resource/images/des4.png" class="discover_bg_img" />
-                <div class="discover_card_details">
-                  <button
-                    class="discover_play_btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal-4"
-                  >
-                    <img src="resource/images/play.svg" />
-                  </button>
-                  <div class="discover_card_text">
-                    <div class="d-flex align-items-center">
-                      <h3>Σκούπες</h3>
-                      <img src="resource/images/card4.svg " />
-                    </div>
-                    <p>
-                      Ποιότητα μπροστά από την εποχή της σημαίνει ότι πιθανόν να χρειαστεί να
-                      αλλάξεις τα χαλιά σου πριν αλλάξεις την ηλεκτρική σκούπα Miele.
-                    </p>
-                    <a
-                      href="https://www.public.gr/cat/oikiakes-mikrosyskeyes/skoupisma/ilektrikes-skoypes?q=kataskeyasths:miele"
-                      target="_blank"
-                      style="text-decoration: none"
-                    >
-                      <button class="">
-                        <span>Δες τα προΪοντα</span>
-                        <img src="resource/images/sarrow.svg" />
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- video modal -->
-            <div
-              class="modal fade"
-              id="exampleModal-4"
-              tabindex="-1"
-              aria-labelledby="exampleModal-4Label"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <iframe
-                      width="100%"
-                      height="380"
-                      src="https://www.youtube.com/embed/VR9L_tau5Yw"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--  -->
-
-          <div class="row discover_card_section">
-            <div class="col-md-12">
-              <!-- desktop card -->
-              <div class="discover_card_full_size discover-card-full-size2">
-                <div class="discover_card_full_size">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="discover_card_text card_text_full_size">
-                        <div class="d-flex align-items-center">
-                          <h3>Πλυντήρια Πιάτων</h3>
-                          <img src="resource/images/card-5.svg " />
-                        </div>
-                        <p>
-                          Συσκευές σχεδιασμένες να διαρκούν για 20 χρόνια. Αυτό σημαίνει ποιότητα
-                          μπροστά από την εποχή της.
-                        </p>
-                        <a
-                          href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20πιάτων%20%26%20αξεσουάρ%22%5D%5D"
-                          target="_blank"
-                          style="text-decoration: none"
-                        >
-                          <button class="">
-                            <span>Δες τα προΪοντα</span>
-                            <img src="resource/images/sarrow.svg" />
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-md-6 discover_card_full_size_btn_play">
-                      <button
-                        class="discover_play_btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal-5"
-                      >
-                        <img src="resource/images/play.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- mobile card -->
-              <div class="discover_card last-moile-card">
-                <img src="resource/images/dishwashers-img.svg" class="discover_bg_img" />
-                <div class="discover_card_details">
-                  <button
-                    class="discover_play_btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal-5"
-                  >
-                    <img src="resource/images/play.svg" />
-                  </button>
-                  <div class="discover_card_text">
-                    <div class="d-flex align-items-center">
-                      <h3>Πλυντήρια Πιάτων</h3>
-                      <img src="resource/images/card-5.svg " />
-                    </div>
-                    <p>
-                      Συσκευές σχεδιασμένες να διαρκούν για 20 χρόνια. Αυτό σημαίνει ποιότητα
-                      μπροστά από την εποχή της.
-                    </p>
-                    <a
-                      href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20πιάτων%20%26%20αξεσουάρ%22%5D%5D"
-                      target="_blank"
-                      style="text-decoration: none"
-                    >
-                      <button class="">
-                        <span>Δες τα προΪοντα</span>
-                        <img src="resource/images/sarrow.svg" />
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- video modal -->
-          <div
-            class="modal fade"
-            id="exampleModal-5"
-            tabindex="-1"
-            aria-labelledby="exampleModal-5Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
+            <!-- card-3-modal -->
+            <div class="modal" id="myModal3">
               <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
+                <span class="close3">&times;</span>
+
+                <div class="modal-content">
                   <iframe
                     width="100%"
                     height="380"
-                    src="https://www.youtube.com/embed/y2nzf9oyV9I"
+                    src="https://www.youtube.com/embed/eOn0m0znGb8"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
                 </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="discover_card">
+              <img src="resource/images/des4.png" class="discover_bg_img" />
+              <div class="discover_card_details">
+                <button class="discover_play_btn" id="myBtn4">
+                  <img src="resource/images/play.svg" />
+                </button>
+                <div class="discover_card_text">
+                  <div class="discover_card_heading">
+                    <h3>Σκούπες</h3>
+                    <img src="resource/images/card4.svg " />
+                  </div>
+                  <p>
+                    Ποιότητα μπροστά από την εποχή της σημαίνει ότι πιθανόν να χρειαστεί να αλλάξεις
+                    τα χαλιά σου πριν αλλάξεις την ηλεκτρική σκούπα Miele.
+                  </p>
+                  <a
+                    href="https://www.public.gr/cat/oikiakes-mikrosyskeyes/skoupisma/ilektrikes-skoypes?q=kataskeyasths:miele"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    <button class="">
+                      <span>Δες τα προΪοντα</span>
+                      <img src="resource/images/sarrow.svg" />
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- card-4-modal -->
+            <div class="modal" id="myModal4">
+              <div class="modal-content">
+                <span class="close4">&times;</span>
+
+                <div class="modal-content">
+                  <iframe
+                    width="100%"
+                    height="380"
+                    src="https://www.youtube.com/embed/VR9L_tau5Yw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+
+          <!-- desktop card -->
+          <div class="discover_card_full_size discover-card-full-size2">
+            <div class="discover_card_text card_text_full_size">
+              <div class="discover_card_heading">
+                <h3>Πλυντήρια Πιάτων</h3>
+                <img src="resource/images/card-5.svg " />
+              </div>
+              <p>
+                Συσκευές σχεδιασμένες να διαρκούν για 20 χρόνια. Αυτό σημαίνει ποιότητα μπροστά από
+                την εποχή της.
+              </p>
+              <a
+                href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20πιάτων%20%26%20αξεσουάρ%22%5D%5D"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <button class="">
+                  <span>Δες τα προΪοντα</span>
+                  <img src="resource/images/sarrow.svg" />
+                </button>
+              </a>
+            </div>
+            <div class="discover_card_full_size_btn_play">
+              <button class="discover_play_btn" id="myBtn5">
+                <img src="resource/images/play.svg" />
+              </button>
+            </div>
+          </div>
+
+          <!--desktop-card-5-modal -->
+          <div class="modal" id="myModal5">
+            <div class="modal-content">
+              <span class="close5">&times;</span>
+
+              <div class="modal-content">
+                <iframe
+                  width="100%"
+                  height="380"
+                  src="https://www.youtube.com/embed/y2nzf9oyV9I"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- mobile card -->
+          <div class="first-four-card">
+            <div class="discover_card last-moile-card">
+              <img src="resource/images/dishwashers-img.svg" class="discover_bg_img" />
+              <div class="discover_card_details">
+                <button class="discover_play_btn" id="myBtn6">
+                  <img src="resource/images/play.svg" />
+                </button>
+                <div class="discover_card_text">
+                  <div class="discover_card_heading">
+                    <h3>Πλυντήρια Πιάτων</h3>
+                    <img src="resource/images/card-5.svg " />
+                  </div>
+                  <p>
+                    Συσκευές σχεδιασμένες να διαρκούν για 20 χρόνια. Αυτό σημαίνει ποιότητα μπροστά
+                    από την εποχή της.
+                  </p>
+                  <a
+                    href="https://www.public.gr/search?q=miele&facetFilters=%5B%5B%22childSkus.hierarchicalCategories.lvl1:μεγάλες%20οικιακές%20συσκευές·ic-appliances%20%3E%20πλυντήρια%20πιάτων%20%26%20αξεσουάρ%22%5D%5D"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    <button class="">
+                      <span>Δες τα προΪοντα</span>
+                      <img src="resource/images/sarrow.svg" />
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--mobile-card-5-modal -->
+          <div class="modal" id="myModal6">
+            <div class="modal-content">
+              <span class="close6">&times;</span>
+
+              <div class="modal-content">
+                <iframe
+                  width="100%"
+                  height="380"
+                  src="https://www.youtube.com/embed/y2nzf9oyV9I"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -610,15 +1572,95 @@
         </section>
       </section>
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- js -->
+
+    <script>
+      // Get the modal
+      var modal1 = document.getElementById("myModal1");
+      var modal2 = document.getElementById("myModal2");
+      var modal3 = document.getElementById("myModal3");
+      var modal4 = document.getElementById("myModal4");
+      var modal5 = document.getElementById("myModal5");
+      var modal6 = document.getElementById("myModal6");
+
+      // Get the button that opens the modal
+      var btn1 = document.getElementById("myBtn1");
+      var btn2 = document.getElementById("myBtn2");
+      var btn3 = document.getElementById("myBtn3");
+      var btn4 = document.getElementById("myBtn4");
+      var btn5 = document.getElementById("myBtn5");
+      var btn6 = document.getElementById("myBtn6");
+
+      // Get the <span> element that closes the modal
+      var span1 = document.getElementsByClassName("close1")[0];
+      var span2 = document.getElementsByClassName("close2")[0];
+      var span3 = document.getElementsByClassName("close3")[0];
+      var span4 = document.getElementsByClassName("close4")[0];
+      var span5 = document.getElementsByClassName("close5")[0];
+      var span6 = document.getElementsByClassName("close6")[0];
+
+      // When the user clicks the button, open the modal
+      btn1.onclick = function () {
+        modal1.style.display = "block";
+      };
+      btn2.onclick = function () {
+        modal2.style.display = "block";
+      };
+      btn3.onclick = function () {
+        modal3.style.display = "block";
+      };
+      btn4.onclick = function () {
+        modal4.style.display = "block";
+      };
+      btn5.onclick = function () {
+        modal5.style.display = "block";
+      };
+      btn6.onclick = function () {
+        modal6.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span1.onclick = function () {
+        modal1.style.display = "none";
+      };
+      span2.onclick = function () {
+        modal2.style.display = "none";
+      };
+      span3.onclick = function () {
+        modal3.style.display = "none";
+      };
+      span4.onclick = function () {
+        modal4.style.display = "none";
+      };
+      span5.onclick = function () {
+        modal5.style.display = "none";
+      };
+      span6.onclick = function () {
+        modal6.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+        if (event.target == modal4) {
+          modal4.style.display = "none";
+        }
+        if (event.target == modal5) {
+          modal5.style.display = "none";
+        }
+        if (event.target == modal6) {
+          modal6.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
